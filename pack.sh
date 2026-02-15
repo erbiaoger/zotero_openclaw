@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 set -euo pipefail
-ROOT="/Users/zhangzhiyu/Desktop/zotero_openclaw"
+ROOT="$(cd "$(dirname "$0")" && pwd)"
 OUT="$ROOT/zotero-openclaw.xpi"
 cd "$ROOT"
 rm -f "$OUT"

@@ -1,0 +1,27 @@
+name: Package Zotero Plugin
+
+on:
+  workflow_dispatch:
+  push:
+    branches:
+      - "**"
+  pull_request:
+
+jobs:
+  package:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Package XPI
+        run: |
+          chmod +x ./pack.sh
+          ./pack.sh
+
+      - name: Upload Artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: zotero-openclaw-xpi
+          path: zotero-openclaw.xpi
+          if-no-files-found: error
