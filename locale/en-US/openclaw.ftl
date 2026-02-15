@@ -1,0 +1,12 @@
+openclaw-prefs-title = Terminal Agent Bridge
+openclaw-prefs-desc = Send selected Zotero items to terminal AI CLIs (Codex, Claude, Gemini).
+openclaw-prefs-task-label = Task template
+openclaw-prefs-task-help = Write reusable prompt text here. Use {{payload}}, {{payloadFile}}, and {{model}} placeholders.
+openclaw-prefs-provider-label = Provider
+openclaw-prefs-provider-help = Switch provider to edit that provider's executable path, model, and args template.
+openclaw-prefs-path-label = Executable path
+openclaw-prefs-path-help = Example: /Users/you/.nvm/versions/node/v24/bin/codex
+openclaw-prefs-model-label = Model name
+openclaw-prefs-model-help = This value replaces {{model}} in args.
+openclaw-prefs-args-label = Command args template
+openclaw-prefs-args-help = Use {{task}} to inject task template. Also supports {{payload}}, {{payloadFile}}, and {{model}}.

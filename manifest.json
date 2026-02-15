@@ -1,0 +1,14 @@
+{
+	"manifest_version": 2,
+	"name": "Zotero Terminal Agent Bridge",
+	"version": "0.2.10",
+	"description": "Send selected Zotero items to terminal AI CLIs with configurable providers and models.",
+	"applications": {
+		"zotero": {
+			"id": "zotero-openclaw@local",
+			"update_url": "https://example.invalid/updates.json",
+			"strict_min_version": "8.0",
+			"strict_max_version": "8.*"
+		}
+	}
+}

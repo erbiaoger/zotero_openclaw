@@ -1,0 +1,32 @@
+<vbox id="openclaw-prefs-root"
+	xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul"
+	xmlns:html="http://www.w3.org/1999/xhtml"
+	flex="1">
+	<label value="Terminal Agent Bridge" class="header"/>
+	<description value="Send selected Zotero items to terminal AI CLIs (Codex, Claude, Gemini)."/>
+	<label value="Task template" control="openclaw-task-template"/>
+	<html:textarea id="openclaw-task-template" style="width: 100%; min-height: 120px;"/>
+	<description value="Reusable prompt template. Supports {{payload}}, {{payloadFile}}, {{model}}."/>
+
+	<label value="Provider" control="openclaw-provider"/>
+	<menulist id="openclaw-provider">
+		<menupopup>
+			<menuitem label="Codex" value="codex"/>
+			<menuitem label="Claude" value="claude"/>
+			<menuitem label="Gemini" value="gemini"/>
+		</menupopup>
+	</menulist>
+	<description value="Switch provider to edit its path/model/args."/>
+
+	<label value="Executable path" control="openclaw-path"/>
+	<html:input id="openclaw-path" type="text" style="width: 100%;"/>
+	<description value="Example: /Users/you/.nvm/versions/node/v24/bin/codex"/>
+
+	<label value="Model name" control="openclaw-model"/>
+	<html:input id="openclaw-model" type="text" style="width: 100%;"/>
+	<description value="Replaces {{model}} in args template."/>
+
+	<label value="Command args template" control="openclaw-args"/>
+	<html:input id="openclaw-args" type="text" style="width: 100%;"/>
+	<description value="Use {{task}} (recommended). Also supports {{payload}}, {{payloadFile}}, {{model}}."/>
+</vbox>
